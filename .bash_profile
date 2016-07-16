@@ -1,5 +1,11 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
+# Add to the `$PATH`
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.sfs:$ZSH/bin:./bin:$PATH"
+# node global path
+export PATH="/usr/local/share/npm/bin:$PATH" 
+ # composer global packages
+export PATH="~/.composer/vendor/bin:$PATH"
+ # man path
+export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -46,3 +52,16 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Get that killer z.sh
+. ~/bin/z.sh
+
+# Git creds
+# Git credentials
+# Not in the repository, to prevent people from accidentally committing under my name
+GIT_AUTHOR_NAME="Kyle Arrington"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+GIT_AUTHOR_EMAIL="kyle@arrington.co"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"

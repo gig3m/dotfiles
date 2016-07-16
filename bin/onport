@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Find out what service is listening on a given local port
+# Examples:
+#
+#   listening <port>
+
+
+# command
+sudo lsof -n -i4TCP:$1 | grep LISTEN

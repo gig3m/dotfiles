@@ -207,11 +207,21 @@ function getcertnames() {
 
 # `s` with no arguments opens the current directory in Sublime Text, otherwise
 # opens the given location
-function s() {
+function e() {
 	if [ $# -eq 0 ]; then
 		subl .;
 	else
 		subl "$@";
+	fi;
+}
+
+# `s` with no arguments opens the current directory in Nano, otherwise
+# opens the given location
+function n() {
+	if [ $# -eq 0 ]; then
+		nano .;
+	else
+		nano "$@";
 	fi;
 }
 

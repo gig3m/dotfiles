@@ -12,7 +12,7 @@ alias -- -="cd -"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias p="cd ~/Projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -46,6 +46,52 @@ alias egrep='egrep --color=auto'
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
+
+# Apache
+alias apup="sudo apachectl start"
+alias apre="sudo apachectl restart"
+alias apdn="sudo apachectl stop"
+
+# git
+# Use `hub` as our git wrapper:
+#   http://hub.github.com/
+hub_path=$(which hub)
+if [[ -f $hub_path ]]
+then
+  alias git=$hub_path
+fi
+
+# The rest of my fun git aliases
+alias gl='git pull --prune'
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias gp='git push origin HEAD'
+alias gd='git diff'
+alias gaa='git add -A'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gcm='git commit -m'
+alias gcob='git checkout --track -b'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+
+# node
+alias redcom="redis-commander"
+alias us="underscore print --color"
+
+# php
+alias artisan="php artisan"
+alias art="php artisan"
+
+
+
+# Remove the hosts that I don't want to keep around- in this case, only
+# keep the first host. Like a boss.
+alias hosts="head -2 ~/.ssh/known_hosts | tail -1 > ~/.ssh/known_hosts"
+
+# Pipe my public key to my clipboard. Fuck you, pay me.
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 
 # Get week number
 alias week='date +%V'
