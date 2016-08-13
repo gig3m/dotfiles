@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 
-# Make sublime the default editor.
-export EDITOR='subl';
+# Make sublime or nano the default editor.
+subl_path=$(which subl)
+if [[ -f $subl_path ]]
+then
+  export EDITOR='subl';
+else
+  export EDITOR='nano';
+fi
 
 # Enable persistent REPL history for `node`.
 export NODE_REPL_HISTORY=~/.node_history;

@@ -54,13 +54,12 @@ alias apdn="sudo apachectl stop"
 
 # git
 # Use `hub` as our git wrapper:
-#   http://hub.github.com/
-# hub_path=$(which hub)
-# if [[ -f $hub_path ]]
-# then
-#   alias git=$hub_path
-# fi
-eval "$(hub alias -s)"
+# http://hub.github.com/
+hub_path=$(which hub)
+if [[ -f $hub_path ]]
+then
+  alias git=$hub_path
+fi
 
 # The rest of my fun git aliases
 alias gl='git pull --prune'
