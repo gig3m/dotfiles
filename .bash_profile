@@ -1,7 +1,7 @@
 # Add to the `$PATH`
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.sfs:$ZSH/bin:./bin:$PATH"
 # node global path
-export PATH="/usr/local/share/npm/bin:$PATH" 
+export PATH="/usr/local/share/npm/bin:$PATH"
  # composer global packages
 export PATH="~/.composer/vendor/bin:$PATH"
  # man path
@@ -64,7 +64,7 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 . ~/bin/z.sh
 
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Git creds
 # Git credentials
