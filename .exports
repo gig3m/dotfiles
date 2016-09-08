@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Make sublime or nano the default editor.
-subl_path=$(which subl)
+subl_path=$(which atom)
 if [[ -f $subl_path ]]
 then
-  export EDITOR='subl';
+  export EDITOR='atom';
 else
   export EDITOR='nano';
 fi
