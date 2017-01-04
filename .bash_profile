@@ -2,6 +2,8 @@
 export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOME/.sfs:$ZSH/bin:./bin:$PATH"
 # node global path
 export PATH="/usr/local/share/npm/bin:$PATH"
+# yarn global path
+export PATH="`yarn global bin`:$PATH"
  # composer global packages
 export PATH="~/.composer/vendor/bin:$PATH"
  # man path
