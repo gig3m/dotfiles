@@ -262,3 +262,19 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# The pw function runs your tests once by calling phpunit tests, watches every
+# php file in src and tests, and runs the tests again when a watched file changes.
+# You can specify any PHPUnit arguments after pw, e.g.
+# pw ./tests/Unit/FooTest.php or pw --filter test_true_is_true.
+function pw {
+    run="clear && printf '\e[3J' && vendor/bin/phpunit"
+    [[ -n $@ ]] && args=$@ || args="tests"
+
+    eval "$run $args"
+    watchman-make \
+        -p 'tests/**/*.php' \
+        --make=$run \
+        -t "$args"
+}
+
