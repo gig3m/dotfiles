@@ -28,7 +28,11 @@ module.exports = {
     padding: '12px 14px',
 
     // Hyperterm Summon
-    summonShortcut: '`'
+    summonShortcut: '`',
+
+    hyperSpotify: {
+      position: 'bottom' // or 'top'
+    },
 
   },
 
@@ -40,10 +44,11 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyperterm-blink',
-    'hyperterm-rocinante',
     'hyperterm-summon',
-    'hyperterm-paste'
-
+		'hyper-zero-dark-matrix',
+		'hyper-quit',
+		'hyper-spotify',
+		'hypercwd'
   ],
 
   // in development, you can create a directory under
