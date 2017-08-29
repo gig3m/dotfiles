@@ -85,6 +85,7 @@ alias us="underscore print --color"
 # php
 alias artisan="php artisan"
 alias art="php artisan"
+alias t="phpunit-watcher watch"
 
 
 
@@ -163,7 +164,6 @@ alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Re
 alias spotoff="sudo mdutil -a -i off"
 # Enable Spotlight
 alias spoton="sudo mdutil -a -i on"
-
 # PlistBuddy alias, because sometimes `defaults` just doesn’t cut it
 alias plistbuddy="/usr/libexec/PlistBuddy"
 
