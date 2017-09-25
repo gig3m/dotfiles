@@ -28,11 +28,16 @@ module.exports = {
     padding: '12px 14px',
 
     // Hyperterm Summon
-    summonShortcut: '`',
+    // summonShortcut: '`',
 
     hyperSpotify: {
       position: 'bottom' // or 'top'
     },
+    summon: {
+      hideDock: true,
+      hideOnBlur: false,
+      hotkey: '`'
+    }
 
   },
 
@@ -45,10 +50,10 @@ module.exports = {
   plugins: [
     'hyperterm-blink',
     'hyperterm-summon',
-		'hyper-zero-dark-matrix',
-		'hyper-quit',
-		'hyper-spotify',
-		'hypercwd'
+    'hyper-zero-dark-matrix',
+    'hyper-quit',
+    'hyper-spotify',
+    'hypercwd'
   ],
 
   // in development, you can create a directory under
